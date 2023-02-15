@@ -11,7 +11,7 @@ import Link from "next/link";
 import { Suspense } from "react";
 
 const getData = async () => {
-  await delay(2000);
+  await delay(1000);
   const user = await getUserFromCookie(cookies());
   const projects = await db.project.findMany({
     where: {
@@ -30,7 +30,7 @@ export default async function Home() {
   const { projects } = await getData();
 
   return (
-    <div className="h-full overflow-y-auto pr-6 w-full">
+    <div className="h-full mx-5 overflow-y-auto pr-6 w-full">
       <div className=" h-full  items-stretch justify-center min-h-[content]">
         <div className="flex-1 grow flex">
           <Suspense fallback={<GreetingsSkeleton />}>

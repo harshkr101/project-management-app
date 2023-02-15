@@ -25,7 +25,6 @@ const getData = async () => {
 };
 const TaskCard = async ({ title, tasks }) => {
   const data = tasks || (await getData());
-
   return (
     <Card>
       <div className="flex justify-between items-center">
